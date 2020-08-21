@@ -1,0 +1,39 @@
+import random
+import string
+# PASSWORD GENERATOR:
+
+# len_of_password= int(input('enter the length of password to generate'))
+# z= string.ascii_letters
+# v=""
+# for x in range(len_of_password):
+#     a=random.choice(z)
+#     v.join(a)
+# print(v)
+
+# ROCK PAPER SCISSOR GAME:
+
+def play():
+    for i in range(0,3):
+        user=input('chose between rock or paper or scissors as r, p, s: ')
+        user=user.lower()
+
+        computer=random.choice(['r','s','p'])
+# Tie Condition
+        if user==computer:
+           return 'you and computer has chose {} and it is a tie'.format(user)
+        #Win,print statement
+        elif is_win(user,computer):
+            return "you have chosen {} and computer has chosen {},you win".format(user,computer)
+# lost print statement
+        return "you have chosen {} and computer has chosen {}, you lost".format(user,computer)
+
+def is_win(user,computer):
+    # return True if player beats the computer/opponent
+    if (user=="r"and computer == "s") or (user=="s"and computer=="p")or(user=="p"and computer=="r"):
+        return True
+    return False
+
+if __name__ == '__main__':
+    print(play())
+
+
