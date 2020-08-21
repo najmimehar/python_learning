@@ -1,0 +1,34 @@
+# WAP TO CHECK THE BMI OF DIFFERENT PERSONS:
+
+name1 = "Mike"
+height_ft1 = 5
+weight_lb1 = 120
+name2 = "Harry"
+height_ft2 = 5
+weight_lb2 = 140
+name3 = "John"
+height_ft3 = 5
+weight_lb3 = 180
+name4 = "Gina"
+height_ft4 = 7
+weight_lb4 = 3000
+def bmi_calculator(name, height_ft, weight_lb):
+    bmi = weight_lb / (height_ft ** 2)
+    print("bmi: ")
+    print(bmi)
+    if bmi < 25:
+        return name + " is not overweight"
+    else:
+        return name + " is overweight"
+
+result1 = bmi_calculator (name1, height_ft1, weight_lb1)
+result2 = bmi_calculator (name2, height_ft2, weight_lb2)
+result3 = bmi_calculator (name3, height_ft3, weight_lb3)
+result4 = bmi_calculator (name4, height_ft4, weight_lb4)
+
+print(result1)
+print(result2)
+print(result3)
+print(result4)
+
+
